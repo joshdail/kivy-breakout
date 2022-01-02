@@ -1,0 +1,36 @@
+#:kivy 2.0.0
+
+<Block>:
+    size: 50, 10
+    canvas:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+<Ball>:
+    size: 10, 10
+    canvas:
+        Ellipse:
+            pos: self.pos
+            size: self.size
+
+<Paddle>:
+    size: 50, 10
+    canvas:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+<BreakoutGame>:
+    ball: ball
+    paddle: paddle
+
+    Ball:
+        id: ball
+        x: root.center_x - 5
+        y: 30
+
+    Paddle:
+        id: paddle
+        x: root.center_x - 25
+        y: 20
